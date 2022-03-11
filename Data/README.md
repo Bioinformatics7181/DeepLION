@@ -1,6 +1,6 @@
 This folder contains the data used in DeepLION: 
 
-    ├── Example_raw_file.tsv        <- A TCR-seq raw file example.
+    ├── Example_raw_file.tsv        <- A raw TCR-sequencing data file example.
     │
     ├── THCA                        <- Processed files containing healthy individual samples as negative samples, named `Health_[NO.].tsv`, and thyroid cancer patient samples as positive samples, named `Patient_[NO.].tsv`.
     │                    
