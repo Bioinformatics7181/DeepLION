@@ -33,9 +33,9 @@ DeepLION is a deep multi-instance learning (MIL) method for identifying cancer-a
 
     ├── LICENSE                     <- Non-commercial license.
     │     
-    ├── README.md                   <- The top-level README for developers using DeepLION.
+    ├── README.md                   <- The top-level README for users using DeepLION.
     │ 
-    ├── Codes                       <- Python scripts of DeepLION. See README for the usages of them.
+    ├── Codes                       <- Python scripts of DeepLION. See README for their usages.
     │   ├── DeepLION_prediction.py  <- Making predictions using pre-trained DeepLION models.
     │   ├── DeepLION_training.py    <- Training DeepLION models.
     │   ├── Evaluation.py           <- Evaluating the performances of DeepLION.
@@ -68,14 +68,14 @@ DeepLION is a deep multi-instance learning (MIL) method for identifying cancer-a
     │   ├── DeepLION_workflow.png
     │   └── Lion.png
     │  
-    ├── Models                      <- Pre-trained DeepLION models for users to make predictions directly.                             
+    ├── Models                      <- Pre-trained DeepLION models for users making predictions directly.                             
     │   ├── Pretrained_Lung.pth 
     │   └── Pretrained_THCA.pth
     │      
     └── Results                     <- Some results of using DeepLION.
+        ├── Example.tsv             <- The result file after processing `Example_raw_file.tsv`.
         ├── Lung_prediction.tsv     <- Prediction results on lung cancer test data using the corresponding pre-trained model.
-        ├── THCA_prediction.tsv     <- Prediction results on thyroid cancer test data using the corresponding pre-trained model.
-        └── Example.tsv             <- The result file after processing `Example_raw_file.tsv`.
+        └── THCA_prediction.tsv     <- Prediction results on thyroid cancer test data using the corresponding pre-trained model.
 
 ## Usage
 
@@ -167,7 +167,7 @@ python DeepLION_training.py --sample_dir ../Data/THCA/TrainingData/ --aa_file ..
 
 ## Citation
 
-When using our results or modelling approach in a publication, please cite our paper: [https://doi.org/10.3389/fgene.2022.860510](https://doi.org/10.3389/fgene.2022.860510):
+When using our results or modelling approach in a publication, please cite our paper ([https://doi.org/10.3389/fgene.2022.860510](https://doi.org/10.3389/fgene.2022.860510)):
 
 >Xu, Y., Qian, X., Zhang, X., Lai, X., Liu, Y. and Wang, J. (2022). DeepLION: Deep Multi-Instance Learning Improves the Prediction of Cancer-associated T Cell ReceptOrs for Accurate CaNcer Detection. Front. Genet. doi: 10.3389/fgene.2022.860510.
 
