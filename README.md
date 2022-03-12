@@ -84,10 +84,10 @@ DeepLION is a deep multi-instance learning (MIL) method for identifying cancer-a
 DeepLION works perfectly in the following versions of the Python packages:
 
 ```
-    Python          3.7.2
-    numpy           1.21.2
-    torch           1.6.0+cpu
-    scikit-learn    0.23.2
+Python          3.7.2
+numpy           1.21.2
+torch           1.6.0+cpu
+scikit-learn    0.23.2
 ```
 
 ### Making predictions using the pre-trained model
@@ -97,23 +97,23 @@ Users can use the pre-trained models we provided in `./Models/Pretrained/` to ma
 First, we need to collect the raw TCR-sequencing data files, such as `./Data/Example_raw_file.tsv`, and use the Python script `./Codes/ProcessRawFiles.py` to process them by this command:
 
 ```
-python ./Codes/ProcessRawFiles.py --input ../Data/Example_raw_file.tsv --reference ../Data/Reference_dataset.tsv --output ../Results/Example.tsv
+python ./Codes/ProcessRawFiles.py --input ./Data/Example_raw_file.tsv --reference ./Data/Reference_dataset.tsv --output ./Results/Example.tsv
 ```
 
 After processing, the low-quality TCR beta chain CDR3 sequences and the sequences appearing in the reference dataset are removed. The top *k* (`default: 100`) TCR sequences and their abundances are saved in `./Results/Example.tsv`:
 
 ```
-	TCR	Abundance
-	CASSLTRLGVYGYTF	0.06351
-	CASSKREIHPTQYF	0.043778
-	CASSLEGGAAMGEKLFF	0.039882
-	CASSPPDRGAFF	0.034422
-	CASSTGTAQYF	0.028211
-	CASSEALQNYGYTF	0.027918
-	CSARADRGQGYEQYF	0.027427
-	CASSPWAATNEKLFF	0.023224
-	CAWGWTGGTYEQYF	0.019363
-	······
+TCR	Abundance
+CASSLTRLGVYGYTF	0.06351
+CASSKREIHPTQYF	0.043778
+CASSLEGGAAMGEKLFF	0.039882
+CASSPPDRGAFF	0.034422
+CASSTGTAQYF	0.028211
+CASSEALQNYGYTF	0.027918
+CSARADRGQGYEQYF	0.027427
+CASSPWAATNEKLFF	0.023224
+CAWGWTGGTYEQYF	0.019363
+······
 ```
 
 If users get raw files in different format, they can also apply this script by setting the argument `--info_index` (`default: [-3. 2]`) to the indexes of CDR3 sequences and their clone fractions in their files.
@@ -121,40 +121,40 @@ If users get raw files in different format, they can also apply this script by s
 Then, we use the Python script `./Codes/DeepLION_prediction.py` to make predictions on processed data files in `./Data/THCA/TestData/` using the pre-trained model `./Models/Pretrained_THCA.pth` by this command:
 
 ```
-python ./Codes/DeepLION_prediction.py --sample_dir ../Data/THCA/TestData/ --model_file ../Models/Pretrained_THCA.pth --aa_file ../Data/AAidx_PCA.txt --output ../Results/THCA_prediction.tsv
+python ./Codes/DeepLION_prediction.py --sample_dir ./Data/THCA/TestData/ --model_file ./Models/Pretrained_THCA.pth --aa_file ./Data/AAidx_PCA.txt --output ./Results/THCA_prediction.tsv
 ```
 
 The prediction results, including sample filenames, probabilities of being cancer-associated, and cancer predictions, are saved in `./Results/THCA_prediction.tsv`:
 
 
 ```
-	Sample	Probability	Prediction
-	Health_001.tsv	0.2733137767311635	False
-	Health_002.tsv	0.11589630679459391	False
-	Health_003.tsv	0.0023036408351775795	False
-	Health_004.tsv	0.04514491246460731	False
-	Health_005.tsv	0.03503014357993675	False
-	Health_006.tsv	0.0008458254917743452	False
-	Health_007.tsv	0.26301584490197166	False
-	Health_008.tsv	0.04840260793287661	False
-	Health_009.tsv	0.00024520156538897236	False
-	······
+Sample	Probability	Prediction
+Health_001.tsv	0.2733137767311635	False
+Health_002.tsv	0.11589630679459391	False
+Health_003.tsv	0.0023036408351775795	False
+Health_004.tsv	0.04514491246460731	False
+Health_005.tsv	0.03503014357993675	False
+Health_006.tsv	0.0008458254917743452	False
+Health_007.tsv	0.26301584490197166	False
+Health_008.tsv	0.04840260793287661	False
+Health_009.tsv	0.00024520156538897236	False
+······
 ```
 
 Finally, we can use the Python script `./Codes/Evaluation.py` to evaluate the performance of DeepLION on these test data by this command:
 
 ```
-python ./Codes/Evaluation.py --input ../Results/THCA_prediction.tsv
+python ./Codes/Evaluation.py --input ./Results/THCA_prediction.tsv
 ```
 
 The metrics, accuracy, sensitivity, specificity, and area under the receiver operating characteristic (ROC) curve (AUC), are calculated and printed as: 
 
 ```
-	----- [../Results/THCA_prediction.tsv] -----
-	        Accuracy:       0.884
-	        Sensitivity:    0.8
-	        Specificity:    0.957
-	        AUC:    0.956
+----- [./Results/THCA_prediction.tsv] -----
+        Accuracy:       0.884
+        Sensitivity:    0.8
+        Specificity:    0.957
+        AUC:    0.956
 ```
 
 ### Training DeepLION models
@@ -162,7 +162,7 @@ The metrics, accuracy, sensitivity, specificity, and area under the receiver ope
 Users can use the Python script `./Codes/DeepLION_training.py` to train their own DeepLION models on their TCR-sequencing data samples for a better prediction performance by this command:
 
 ```
-python DeepLION_training.py --sample_dir ../Data/THCA/TrainingData/ --aa_file ../Data/AAidx_PCA.txt --dropout 0.4 --epoch 1000 --learning_rate 0.001 --output ../Models/Pretrained_THCA.pth
+python ./Codes/DeepLION_training.py --sample_dir ./Data/THCA/TrainingData/ --aa_file ./Data/AAidx_PCA.txt --dropout 0.4 --epoch 1000 --learning_rate 0.001 --output ./Models/Pretrained_THCA.pth
 ```
 
 ## Citation
