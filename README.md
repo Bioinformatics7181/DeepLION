@@ -173,6 +173,6 @@ When using our results or modelling approach in a publication, please cite our p
 
 ## Contacts
 
-DeepLION is actively maintained by Xinyang Qian, currently a Ph.D student at Xi'an Jiaotong University in the research group of prof. Jiayin Wang.
+DeepLION is actively maintained by Xinyang Qian, currently a Ph.D student at Xi'an Jiaotong University in the research group of Prof. Jiayin Wang.
 
 If you have any questions, please contact us by e-mail: qianxy@stu.xjtu.edu.cn.
