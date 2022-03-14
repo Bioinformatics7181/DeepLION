@@ -20,7 +20,7 @@ DeepLION is a deep multi-instance learning (MIL) method for identifying cancer-a
 - [Usage](#usage)
   - [Python package versions](#python-package-versions)
   - [Making predictions using the pre-trained model](#making-predictions-using-the-pre-trained-model)
-  - [Training DeepLION models](#training-models)
+  - [Training DeepLION models](#training-deeplion-models)
 - [Citation](#citation)
 - [Contacts](#contacts)
 
