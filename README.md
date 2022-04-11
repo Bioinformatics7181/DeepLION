@@ -3,7 +3,7 @@
 Deep MuLti-Instance Learning Improves the Prediction of Cancer-associated T Cell ReceptOrs for Accurate CaNcer Detection
 ------------------------------
 
-DeepLION is a deep multi-instance learning (MIL) method for identifying cancer-associated T cell receptors (TCRs) and detecting cancer samples using TCR-sequencing data. Its workflow is divided into three parts: data preprocessing, the convolutional neural network (CNN) for TCRs, and MIL. For more details, please read our paper `DeepLION: Deep MuLti-Instance Learning Improves the Prediction of Cancer-associated T Cell ReceptOrs for Accurate CaNcer Detection`.
+DeepLION is a deep multi-instance learning (MIL) method for identifying cancer-associated T cell receptors (TCRs) and detecting cancer samples using TCR-sequencing data. Its workflow is divided into three parts: data preprocessing, the convolutional neural network (CNN) for TCRs, and MIL. For more details, please read our paper [`DeepLION: Deep Multi-Instance Learning Improves the Prediction of Cancer-Associated T Cell Receptors for Accurate Cancer Detection`](https://doi.org/10.3389/fgene.2022.860510).
 
 <p float="left">
   <img src="Figures/DeepLION_workflow.png" width="781" height="450"/>
@@ -169,7 +169,7 @@ python ./Codes/DeepLION_training.py --sample_dir ./Data/THCA/TrainingData/ --aa_
 
 When using our results or modelling approach in a publication, please cite our paper ([https://doi.org/10.3389/fgene.2022.860510](https://doi.org/10.3389/fgene.2022.860510)):
 
->Xu, Y., Qian, X., Zhang, X., Lai, X., Liu, Y. and Wang, J. (2022). DeepLION: Deep Multi-Instance Learning Improves the Prediction of Cancer-associated T Cell ReceptOrs for Accurate CaNcer Detection. Front. Genet. doi: 10.3389/fgene.2022.860510.
+>Xu Y, Qian X, Zhang X, Lai X, Liu Y and Wang J (2022) DeepLION: Deep Multi-Instance Learning Improves the Prediction of Cancer-Associated T Cell Receptors for Accurate Cancer Detection. *Front. Genet.* 13:860510. doi: 10.3389/fgene.2022.860510
 
 ## Contacts
 
